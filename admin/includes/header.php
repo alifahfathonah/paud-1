@@ -68,7 +68,11 @@ td {font-family: Verdana, Arial;font-size: 12px;color:#000000;}
                     </li>
 					<li><a class="dir" style="cursor: pointer">Master</a>
                         <ul>
-                             <li><a href="user.php">Users</a></li>
+                             <li><a class='dir' href="tampildata_users.php">Users</a>
+				<ul>
+					<li><a href="<?php echo ADMIN_ADDR."/tambah_users.php" ?>"> Tambah User</a></li>
+					</ul>
+			     </li>
                         </ul>
                     </li>
                  </ul>
