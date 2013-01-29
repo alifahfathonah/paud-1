@@ -1,0 +1,143 @@
+
+body {
+    background-color: #363636;
+    height: 100%;
+    margin: 0;
+}
+
+
+#header {
+    margin: 0 0 0 0;
+	height: 116px;
+	padding: 0px 30px;
+	background:url(../images/header_Bs1.png) repeat-x;
+    font-size: 18px;
+	min-width: 850px;
+	
+    color: #FFFFFF;
+    font-family: 'Times New Roman',Times,serif;
+}
+#content {
+    margin: 0 0 0 0;
+	padding: 10px 10px 0px 10px;
+	min-width: 900px;
+    width: auto;
+    min-height: 400px;
+    height: auto;
+	padding-bottom: -20px;
+}
+#content1 {
+    margin: 0 0 0 0;
+	padding: 10px 10px 0px 10px;
+	min-width: 900px;
+    width: auto;
+    min-height: 400px;
+    height: auto;
+	padding-bottom: 128px;
+}
+#container {
+    
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px 0;
+    text-align: left;
+    width: 940px;
+}
+body > #container {
+	height: auto;
+	min-height: 100%;
+}
+#footer {
+	background: #FFFFFF url('../images/header_Bs.png') repeat-x;
+	height: 80px;
+	padding-top: 8px;
+	text-align: center;
+	font-size: 12px;
+	color: #FFFFFF ;
+	position: relative;
+	margin-top: 50px;
+	clear: both;
+        font-family: tahoma;
+        font-size: 12px;
+        text-decoration: none;
+}
+#footer1 {
+	background: #FFFFFF url('../images/header_Bs.png') repeat-x;
+	height: 80px;
+	padding-top: 18px;
+	text-align: center;
+	font-size: 12px;
+	color: #FFFFFF ;
+	position: relative;
+	margin-top: 80px;
+	clear: both;
+        font-family: tahoma;
+        font-size: 12px;
+        text-decoration: none;
+}
+#footer a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+.box{
+    margin-bottom: 15px;
+}
+.box > .heading{
+    height: 50px;
+	width: 325px;
+    background:url('../images/headfwk.png')repeat-x;
+    margin-bottom: 0px;
+}
+.box > .left{
+    float: left;
+    height: 40px;
+    width: 7px;
+    background: url('../images/box_left.png') no-repeat;
+    margin-bottom: 0px;
+}
+.box > .right{
+    float: right;
+    height: 40px;
+    width: 7px;
+    background: url('../images/box_right.png') no-repeat;
+    margin-bottom: 0px;
+}
+.box > .heading h1 {
+    background-position:  2px 9px;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 11px 0px 11px 30px;
+    color:#FFFFFF;
+    font-family: tahoma, sans-serif;
+    font-size: 14px;
+    float: left;
+}
+.box > .content{
+    padding: 10px;
+    border-left: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    min-height: 300px;
+}
+#menu{
+    background:url('../images/kayu_header_6.png') repeat-x;
+    height: 34px;
+    min-width: 900px;
+}
+
+#table_test th{
+background:url(../images/menu.png) repeat-x;
+height:30px;
+}
+#kotak{
+    width:250px;
+	height:240px;
+	margin: 50px 5px 5px 320px;
+	background:url(../images/Admin1.png);
+	padding:5px 5px 5px 5px;
+	-moz-box-shadow:0px 0px 5px #000;
+	-webkite-border-shadow: 0px 0px 5px #000;
+	-webkite-border-radius: 8px;
+	border-radius: 8px;
+	word-wrap:break-word;
