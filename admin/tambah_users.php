@@ -10,8 +10,6 @@ if(!isset($_SESSION['username']))
 
 include  ADMIN_FOLDER."/includes/header.php";
 
-$sql = "SELECT * FROM page_content WHERE page_type = 'visi'";
-$row=$database->query($sql);
 //echo debug($row);
 //$r = mysql_query($query_r, $koneksi) or die(mysql_error());
 //$row = mysql_fetch_row($r);
@@ -28,7 +26,7 @@ and open the template in the editor.
   </tr>
 <tr>
     <td class="style3">
-    <form action=proses_user.php method="POST" name="formadd" id="formadd">
+    <form action=proses_user.php method="POST" name="formadd" id="formadd" enctype="multipart/form-data">
       <table width="709" border="1" align="center">
         <tr>
           <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">User Name</td>
@@ -37,6 +35,12 @@ and open the template in the editor.
         <tr>
           <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">Password</td>
           <td><input name="user_pass" type="password" size="70" id="password" value=""></td>
+        </tr>
+	<tr>
+          <td width="163" height="36"><font size="3" face="Times New Roman, Times, serif" color="#000000">Photo</td>
+          <td width="530">
+	    <input name="user_photo" type="file" >
+	  </td>
         </tr>
 		 <tr>
           <td height="34">&nbsp;</td>

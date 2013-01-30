@@ -28,7 +28,7 @@ and open the template in the editor.
   </tr>
 <tr>
     <td class="style3">
-    <form action=update_users.php method="POST" name="formedit" id="formedit">
+    <form action=update_users.php method="POST" name="formedit" id="formedit" enctype="multipart/form-data">
     <input name="user_id" type="hidden" value="<?php echo $row[0];?>">
       <table width="709" border="1" align="center">
         <tr>
@@ -37,9 +37,23 @@ and open the template in the editor.
         </tr>
         <tr>
           <td width="163" height="36"><font size="3" face="Times New Roman, Times, serif" color="#000000">Passwords</td>
-          <td width="530"><input name="user_pass" type="password" size="70" id="user_pass" value=""></td>
+          <td width="530">
+	    <input name="user_pass" type="password" size="70" id="user_pass" value=""><br>
+	    Tinggalkan kosong jika password tidah diganti 
+	  </td>
         </tr>
-        	 <tr>
+        <tr>
+          <td width="163" height="36"><font size="3" face="Times New Roman, Times, serif" color="#000000">Photo</td>
+          <td width="530">
+<?php    if($row[3]) {
+	    echo "<img src='".IMG_ADDR."/users/".$row[3]."'><br>";
+	 }   
+?>    
+	    <input type="hidden" name="photo" value="<?php echo $row[3]; ?>">
+	    <input name="user_photo" type="file" >
+	  </td>
+        </tr>
+	<tr>
           <td height="34">&nbsp;</td>
           <td><input type="submit" name="Submit" value="Edit">
             <input type="reset" name="Reset" value="Batal"></td>
