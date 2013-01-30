@@ -1,0 +1,10 @@
+/**** Phpmyadmin 110.5.109.140 ****/
+
+URL 	: http://110.5.109.140/dbadmin
+User 	: sirsak
+Pass	: s1rs4k2012
+Db Name	: disc dan sirsak
+
+/**** Phpmyadmin 110.5.109.140 ****/
+
+

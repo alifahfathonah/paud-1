@@ -8,8 +8,14 @@ if(!isset($_SESSION['username']))
     header('Location: index.php');	
 }
 
-$user_name=$_POST['user_name'];
-$user_pass=$_POST['user_pass'];
+$user_name	=$_POST['user_name'];
+$user_pass	=$_POST['user_pass'];
+$first_name	=$_POST['first_name'];
+$last_name	=$_POST['last_name'];
+$gender		=$_POST['gender'];
+$address	=strip_tags($_POST['address']);
+$email_addr	=$_POST['email_addr'];
+$phone_number	=$_POST['phone_number'];
 
 $tmp_file   = $_FILES['user_photo']['tmp_name'];
 $t=explode(".",$_FILES['user_photo']['name']);
@@ -24,7 +30,12 @@ if($tmp_file) {
 }
 
 
-$sql="iNSERT INTO users (`user_name`, `user_pass`,`photo`,`user_createddate`) values('".$user_name."', '".sha1($user_pass)."','".$photo_file."',NOW())";
+$sql="INSERT INTO users
+       (`user_name`, `user_pass`,`first_name`,`last_name`,`gender`,`address`,`email_addr`,`phone_number`,
+        `photo`,`user_createddate`) values
+       ('".$user_name."', '".sha1($user_pass)."','".$first_name."','".$last_name."','".$gender."','".
+       $address."', '".$email_addr."', '".$phone_number."', '".$photo_file."',NOW())";
+//echo debug($sql);
 $database->execsql($sql);
 header ("Location: tampildata_users.php");
 exit;

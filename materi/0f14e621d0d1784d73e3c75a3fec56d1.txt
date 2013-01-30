@@ -1,0 +1,8 @@
+(10:36:12 PM) Titus: http://dev.ggn.atoma.co.id
+(10:36:21 PM) Titus: (s)ftp/shell username: dev_atoma
+(10:36:27 PM) Titus: password: Lw47MaVU
+(10:36:30 PM) Titus: mysql:
+(10:36:34 PM) Titus: host: mysql.atoma.co.id
+(10:36:38 PM) Titus: username: dev_ggn
+(10:36:41 PM) Titus: password: Lw47MaVU
+(10:36:45 PM) Titus: DB: dev_ggn

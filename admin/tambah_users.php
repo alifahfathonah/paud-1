@@ -30,11 +30,38 @@ and open the template in the editor.
       <table width="709" border="1" align="center">
         <tr>
           <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">User Name</td>
-          <td><input name="user_name" type="text" size="70" id="user_name" value="<?php echo $username;?>"></td>
+          <td><input name="user_name" type="text" size="70" id="user_name" value=""></td>
         </tr>
         <tr>
           <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">Password</td>
           <td><input name="user_pass" type="password" size="70" id="password" value=""></td>
+        </tr>
+	<tr>
+          <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">Nama Depan</td>
+          <td><input name="first_name" type="text" size="70" id="last_name" value=""></td>
+        </tr>
+	<tr>
+          <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">Nama Belakang</td>
+          <td><input name="last_name" type="text" size="70" id="last_name" value=""></td>
+        </tr>
+	<tr>
+          <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">Jenis Kelamin</td>
+          <td>
+	    <input name="gender" type="radio" id="gender" value="m" > Laki-laki
+	    <input name="gender" type="radio" id="gender" value="f" > Perempuan
+	  </td>
+        </tr>
+	<tr>
+          <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">Alamat</td>
+          <td><textarea name="address" rows="5" id="address" cols="35"></textarea></td>
+        </tr>
+	<tr>
+          <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">Alamat E-mail</td>
+          <td><input name="email_addr" type="text" size="70" id="email_addr" value=""></td>
+        </tr>
+	<tr>
+          <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">No Telepon</td>
+          <td><input name="phone_number" type="text" size="70" id="phone_number" value=""></td>
         </tr>
 	<tr>
           <td width="163" height="36"><font size="3" face="Times New Roman, Times, serif" color="#000000">Photo</td>

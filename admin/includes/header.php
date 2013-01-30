@@ -55,9 +55,9 @@ td {font-family: Verdana, Arial;font-size: 12px;color:#000000;}
                         
                     </li>
                     </li>
-                   <li><a class="dir" style="cursor: pointer">Nilai Prestasi</a>
+                   <li><a href='<?php echo ADMIN_ADDR."/tampildata_materi.php" ?>' class="dir" style="cursor: pointer">Materi</a>
                         <ul>
-                            
+                            <li><a href="">Tambah Materi</a></li>
                         </ul>
                    </li>
                     

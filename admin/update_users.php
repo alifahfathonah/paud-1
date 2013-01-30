@@ -12,6 +12,12 @@ if(!isset($_SESSION['username']))
 $id         = $_POST['user_id'];
 $user_name  = $_POST['user_name'];
 $user_pass  = $_POST['user_pass'];
+$first_name	=$_POST['first_name'];
+$last_name	=$_POST['last_name'];
+$gender		=$_POST['gender'];
+$address	=strip_tags($_POST['address']);
+$email_addr	=$_POST['email_addr'];
+$phone_number	=$_POST['phone_number'];
 $tmp_file   = $_FILES['user_photo']['tmp_name'];
 $t=explode(".",$_FILES['user_photo']['name']);
 $filename   = md5($_FILES['user_photo']['name'].date("Ymdhis")).".".$t[1];
@@ -29,10 +35,16 @@ if($tmp_file) {
 }
 
 $query_r = "UPDATE users SET
-                user_name = '$user_name', ".$q." 
+                user_name = '$user_name', ".$q."
+                first_name = '$first_name',
+                last_name = '$last_name',
+                gender = '$gender',
+                address = '$address',
+                email_addr = '$email_addr',
+                phone_number = '$phone_number',
                 photo ='$photo_file' 
             WHERE user_id = '$id' ";
-//echo debug($query_r);            
+
 $r = $database->execsql($query_r);
 
 header ("Location: tampildata_users.php");

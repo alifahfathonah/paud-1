@@ -20,6 +20,7 @@ $db= array(
 //Path Configuration
 define('ROOT',dirname(__FILE__));
 define('IMG_FOLDER',ROOT."/images");
+define('MATERIAL_FOLDER',ROOT."/materi");
 define('JS_FOLDER',ROOT."/js");
 define('CSS_FOLDER',ROOT."/css");
 define('SYS_FOLDER',ROOT."/system");
@@ -31,6 +32,7 @@ define('ADMIN_FOLDER',ROOT."/admin");
 //URL Configuration
 define('URL_ADDR','http://'.$_SERVER['HTTP_HOST']);
 define('IMG_ADDR',URL_ADDR."/images");
+define('MATERIAL_ADDR',URL_ADDR."/materi");
 define('JS_ADDR',URL_ADDR."/js");
 define('CSS_ADDR',URL_ADDR."/css");
 define('SYS_ADDR',URL_ADDR."/system");
