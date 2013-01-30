@@ -1,20 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.11.1deb1
+-- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2013 at 11:40 AM
+-- Generation Time: Jan 30, 2013 at 11:59 PM
 -- Server version: 5.5.29
--- PHP Version: 5.4.6-1ubuntu1.1
+-- PHP Version: 5.3.10-1ubuntu3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `pauddb`
@@ -121,7 +115,7 @@ INSERT INTO `kuis` (`id_kuis`, `soal`, `jawab_a`, `jawab_b`, `jawab_c`, `jawab_d
 
 DROP TABLE IF EXISTS `materi`;
 CREATE TABLE IF NOT EXISTS `materi` (
-  `id_materi` int(4) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `id_materi` int(4) NOT NULL AUTO_INCREMENT,
   `kd_matakuliah` char(4) NOT NULL,
   `bab_nama` varchar(60) NOT NULL,
   `bab_judul` varchar(100) NOT NULL,
@@ -129,16 +123,16 @@ CREATE TABLE IF NOT EXISTS `materi` (
   `file_data` varchar(100) NOT NULL,
   `tanggal` datetime NOT NULL,
   PRIMARY KEY (`id_materi`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `materi`
 --
 
 INSERT INTO `materi` (`id_materi`, `kd_matakuliah`, `bab_nama`, `bab_judul`, `definisi`, `file_data`, `tanggal`) VALUES
-(0014, 'M001', 'Bab 1', 'Pembahasan J2ME', 'Belajar  ', 'M001.Contoh Program Komponen J2ME.rar', '2009-12-12 22:49:27'),
-(0012, 'M003', 'Bab 3', 'Database J2ME', 'ruang lingkup  ', 'M003.Contoh Program Database J2ME.rar', '2009-12-11 22:29:47'),
-(0013, 'M001', 'Bab 1', 'Pembahasan J2ME', 'Belajar  ', 'M001.Contoh Program Komponen J2ME.rar', '2009-12-12 22:48:52');
+(1, 'M001', 'Bab 1', 'Pembahasan J2ME', 'Belajar3', '', '2009-12-12 22:49:27'),
+(2, 'M003', 'Bab 3', 'Database J2ME', 'ruang lingkup  ', 'M003.Contoh Program Database J2ME.rar', '2009-12-11 22:29:47'),
+(3, 'M001', 'Bab 1', 'Pembahasan J2ME', 'Belajar  ', 'M001.Contoh Program Komponen J2ME.rar', '2009-12-12 22:48:52');
 
 -- --------------------------------------------------------
 
@@ -183,20 +177,25 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(100) NOT NULL,
   `user_pass` varchar(100) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `gender` enum('m','f') NOT NULL DEFAULT 'm',
+  `address` text NOT NULL,
+  `email_addr` varchar(255) NOT NULL,
+  `phone_number` varchar(30) NOT NULL,
   `photo` varchar(255) NOT NULL,
   `user_lastlogindate` datetime NOT NULL,
   `user_createddate` datetime NOT NULL,
   PRIMARY KEY (`user_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `user_pass`, `photo`, `user_lastlogindate`, `user_createddate`) VALUES
-(1, 'admin', 'e158843af981dc589768882974440a59a90c616d', '', '2012-12-30 19:10:51', '2012-12-09 00:00:00');
+INSERT INTO `users` (`user_id`, `user_name`, `user_pass`, `first_name`, `last_name`, `gender`, `address`, `email_addr`, `phone_number`, `photo`, `user_lastlogindate`, `user_createddate`) VALUES
+(1, 'admin', 'e158843af981dc589768882974440a59a90c616d', '', '', 'm', '', '', '', '', '2012-12-30 19:10:51', '2012-12-09 00:00:00'),
+(5, 'asutarko', 'e158843af981dc589768882974440a59a90c616d', 'Andre', 'Sutarko', 'm', '', '', '', 'f7a2856f2a82b1038504d4bb78c42f93.png', '0000-00-00 00:00:00', '2013-01-30 22:09:24'),
+(6, '', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '', '', '', '', '', '', '', '0000-00-00 00:00:00', '2013-01-30 23:19:22');
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
