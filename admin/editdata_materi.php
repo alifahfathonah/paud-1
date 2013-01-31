@@ -50,6 +50,9 @@ and open the template in the editor.
 	<tr>
           <td width="163" height="36"><font size="3" face="Times New Roman, Times, serif" color="#000000">File</td>
           <td width="530">
+	    <?php if($row['file_data']) { ?>
+		<a href='<?php echo MATERIAL_FOLDER.'/'.$row['file_data'] ?>'><?php echo $row['bab_nama'] ?></a><br>
+	    <?php } ?>
 	    <input name="materi_file" type="file" >
 	  </td>
         </tr>
