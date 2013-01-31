@@ -1,14 +1,20 @@
-<html>
-<head>
-<title>Konsultasi dan Jawaban</title>
-</head>
-<body>
+<?php
+session_start();
+    
+require_once("../../config.php");
+
+if(!isset($_SESSION['username']))
+{
+    header('Location: ../index.php');	
+}
+include  ADMIN_FOLDER."/includes/header.php"; ?>
+
 <table width="500" border="0" align="center" cellpadding="2" cellspacing="1">
   <tr align="right" bgcolor="#22B5DD"> 
     <td colspan="2">[ <a href="./jawab/TampilSemua.php" target="_self">Tampil Semua</a>]</td>
   </tr>
   <?php 
-    include "konfigurasi.php";
+    require_once "konfigurasi.php";
 	if($_GET[tampil]!='all')
 	{
 	$sql = "SELECT  * 
@@ -47,5 +53,4 @@
   ?>
   
 </table>
-</body>
-</html>
+<?php include ADMIN_ADDR."/includes/footer.php"; ?>

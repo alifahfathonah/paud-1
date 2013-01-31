@@ -3,8 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Pendidik Paud</title>
-        <link type="text/css" rel="stylesheet" href="stylesheet/admin.css" />
-        <link type="text/css" rel="stylesheet" href="stylesheet/style.css" />      
+        <link type="text/css" rel="stylesheet" href="<?php echo CSS_ADDR."/admin/admin.css" ?>" />
+        <link type="text/css" rel="stylesheet" href="<?php echo CSS_ADDR."/admin/admin.css" ?>" />      
         <style type="text/css">
 <!--
 .style1 {color: #FFFFFF}
