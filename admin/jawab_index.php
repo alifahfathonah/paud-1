@@ -1,7 +1,7 @@
 <?php
 session_start();
     
-require_once("../../config.php");
+require_once("../config.php");
 
 if(!isset($_SESSION['username']))
 {
@@ -11,11 +11,11 @@ include  ADMIN_FOLDER."/includes/header.php"; ?>
 
 <table width="500" border="0" align="center" cellpadding="2" cellspacing="1">
   <tr align="right" bgcolor="#22B5DD"> 
-    <td colspan="2">[ <a href="./jawab/TampilSemua.php" target="_self">Tampil Semua</a>]</td>
+    <td colspan="2">[ <a href="<?php echo ADMIN_ADDR."/tampil_jawab.php" ?>" target="_self">Tampil Semua</a>]</td>
   </tr>
   <?php 
-    require_once "konfigurasi.php";
-	if($_GET[tampil]!='all')
+	$tampil= (!isset($_GET['tampil']))?'all':$_GET['tampil'];
+	if($tampil!='all')
 	{
 	$sql = "SELECT  * 
 			FROM konsultasi_tanya
@@ -27,10 +27,11 @@ include  ADMIN_FOLDER."/includes/header.php"; ?>
 	{
 	$sql = "SELECT * FROM konsultasi_tanya";
 	}
-	$qry = mysql_query($sql, $koneksi) 
-		 or die ("SQL Error: ".mysql_error());
-	while ($data=mysql_fetch_array($qry)) {
-	  $no++;
+	$qry = $database->loadquery($sql);
+	if($qry) {
+	    $no=0;
+	    foreach($qry as $data) {	
+		$no++;
   ?>
   <tr> 
     <td width="112"><b>Pertanyaan</b></td>
@@ -42,15 +43,16 @@ include  ADMIN_FOLDER."/includes/header.php"; ?>
   </tr>
   <tr bgcolor="#DBEAF5"> 
     <td valign="top"><b>Jawaban</b></td>
-    <td bgcolor="#DBEAF5"><a href="./jawab/KonsultasiJawabFm.php?idtanya=<?php echo $data['id_tanya']; ?>">
+    <td bgcolor="#DBEAF5"><a href="./konsultasijawabfm.php?idtanya=<?php echo $data['id_tanya']; ?>">
      Jawab Pertanyaan ini</a></td>
   </tr>
   <tr> 
     <td colspan="2">&nbsp;</td>
   </tr>
   <?php
+    }
   }
   ?>
   
 </table>
-<?php include ADMIN_ADDR."/includes/footer.php"; ?>
+<?php include ADMIN_FOLDER."/includes/footer.php"; ?>

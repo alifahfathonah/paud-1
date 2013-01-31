@@ -1,21 +1,27 @@
-<?php 
-include "konfigurasi.php";
+<?php
+session_start();
+    
+require_once("../config.php");
+
+if(!isset($_SESSION['username']))
+{
+    header('Location: index.php');	
+}
+include  ADMIN_FOLDER."/includes/header.php"; 
 
 # Baca variabel URL (If Register Global ON)
 $idtanya = $_GET['idtanya'];
 
+$TxtJawaban=(!isset($TxtJawaban))?'':$TxtJawaban;
+$TxtPenjawab=(!isset($TxtPenjawab))?'':$TxtPenjawab;
+
 # Penyimpanan
 $sql = "SELECT * FROM konsultasi_tanya WHERE id_tanya='$idtanya'";
-$qry = mysql_query($sql, $koneksi) 
-	 or die ("SQL Error: ".mysql_error());
-$data=mysql_fetch_array($qry);
+$data = $database->query($sql);
+
 ?>
-<html>
-<head>
-<title>Konsulitasi Matakuliah</title>
-</head>
-<body>
-<form action="KonsultasiJawabSim.php" method="post" name="form1" target="_self">
+
+<form action="konsultasijawabsim.php" method="post" name="form1" target="_self">
 <table width="450" border="0" cellspacing="1" cellpadding="2">
 <tr bgcolor="#77B6D0"> 
   <td colspan="2"><b>HALAMAN UNTUK MENJAWAB</b></td>
@@ -44,5 +50,4 @@ $data=mysql_fetch_array($qry);
 </tr>
 </table>
 </form>
-</body>
-</html>
+<?php include ADMIN_FOLDER."/includes/footer.php" ?>

@@ -1,21 +1,30 @@
-<html>
-<head>
-<title>Konsultasi dan Jawaban</title>
-</head>
-<body>
+<?php
+session_start();
+    
+require_once("../config.php");
+
+if(!isset($_SESSION['username']))
+{
+    header('Location: index.php');	
+}
+
+include  ADMIN_FOLDER."/includes/header.php";
+
+?>
 <table width="500" border="0" align="center" cellpadding="2" cellspacing="1">
   <tr align="right" bgcolor="#22B5DD"> 
-    <td colspan="2">[ <a href="index.php?admin=jawab" target="_self">Pertanyaan</a> ]</td>
+    <td colspan="2">[ <a href="<?php echo ADMIN_ADDR."/jawab_index.php?admin=jawab" ?>" target="_self">Pertanyaan</a> ]</td>
   </tr>
   <?php 
-    include "konfigurasi.php";
+    
 	$sql = "SELECT konsultasi_tanya.*,konsultasi_jawab.* 
 			FROM konsultasi_tanya,konsultasi_jawab 
 			WHERE konsultasi_tanya.id_tanya=konsultasi_jawab.id_jawab
 			ORDER BY konsultasi_tanya.id_tanya";
-	$qry = mysql_query($sql, $koneksi) 
-		 or die ("SQL Error: ".mysql_error());
-	while ($data=mysql_fetch_array($qry)) {
+	$qry = $database->loadquery($sql);
+	//echo debug($qry); 
+	$no=1;
+	foreach($qry as $data) {
 	  $no++;
   ?>
   <tr> 
@@ -40,5 +49,4 @@
   }
   ?>
 </table>
-</body>
-</html>
+<?php include ADMIN_FOLDER."/includes/footer.php" ?>

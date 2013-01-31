@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Pendidik Paud</title>
         <link type="text/css" rel="stylesheet" href="<?php echo CSS_ADDR."/admin/admin.css" ?>" />
-        <link type="text/css" rel="stylesheet" href="<?php echo CSS_ADDR."/admin/admin.css" ?>" />      
+        <link type="text/css" rel="stylesheet" href="<?php echo CSS_ADDR."/admin/style.css" ?>" />      
         <style type="text/css">
 <!--
 .style1 {color: #FFFFFF}
@@ -61,9 +61,9 @@ td {font-family: Verdana, Arial;font-size: 12px;color:#000000;}
                         </ul>
                    </li>
                     
-                     <li><a class="dir" style="cursor: pointer">Nilai Total</a>
+                     <li><a href='<?php echo ADMIN_ADDR."/tampil_jawab.php" ?>' class="dir" style="cursor: pointer">Tanya Jawab</a>
 					<ul>
-					<li><a href="nilai_total.php"> Total Penilaian Kinerja Karyawan</a></li>
+					
 					</ul>
                     </li>
 					<li><a class="dir" style="cursor: pointer">Master</a>
