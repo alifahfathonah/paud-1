@@ -1,9 +1,9 @@
 <?php
-include 'config.php';
+include_once 'config.php';
 	
 # Baca variabel Form (If Register Global ON)
-$TxtPertanyaan = $_POST['TxtPertanyaan'];
-$TxtPenanya    = $_POST['TxtPenanya'];
+$TxtPertanyaan = (!isset($_POST['TxtPertanyaan']))?'':$_POST['TxtPertanyaan'];
+$TxtPenanya    = (!isset($_POST['TxtPenanya']))?'':$_POST['TxtPenanya'];
 
 # Validasi Form
 if (trim($TxtPertanyaan)=="") {
