@@ -10,7 +10,7 @@ $kdmakul = (!isset($_GET['kdmakul']))?'':$_GET['kdmakul'];
   <td height="54" colspan="2" align="center"><B>[ SISTEM TANYA JAWAB MATA PELAJARAN ] </B></td>
 </tr>
 <tr align="right" bgcolor="#22B5DD"> 
-  <td colspan="2">[ <a href="./tanya/KonsultasiTanyaFm.php" target="_self">Tanya Lagi</a> 
+  <td colspan="2">[ <a href="<?php echo URL_ADDR."/konsultasitanyafm.php" ?>" target="_self">Tanya Lagi</a> 
 	]</td>
 </tr>
 

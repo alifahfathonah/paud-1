@@ -10,28 +10,7 @@ $TxtPenanya=(!isset($TxtPenanya))?'':$TxtPenanya;
 <tr bgcolor="#77B6D0"> 
   <td colspan="2"><b>KONSULTASI MATAKULIAH</b></td>
 </tr>
-<!--<tr bgcolor="#DBEAF5"> 
-  <td width="83">Matakuliah</td>		
-  <td width="356"> 
-	<select name="CmbMatakuliah">
-	<option value="NULL">[ Kategori Matakuliah ]</option>
-	<?php 
-		
-	$sql = "SELECT * FROM matakuliah ORDER BY kd_matakuliah";
-	$qry = $database->loadquery($sql);
-	foreach($qry as $data) {
-		if ($data['kd_matakuliah']==$CmbMatakuliah) {
-			$cek ="selected";
-		}
-		else {
-			$cek ="";
-		}
 
-		echo "<option value='$data[kd_matakuliah]' $cek>$data[nm_matakuliah]</option>";
-	}
-	?>
-	</select></td>
-</tr>-->
 <tr bgcolor="#DBEAF5"> 
   <td valign="top" bgcolor="#DBEAF5">Pertanyaan</td>
   <td bgcolor="#DBEAF5"> 
