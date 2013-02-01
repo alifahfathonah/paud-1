@@ -44,7 +44,7 @@
 				<input type="text" value="Search here ..." title="Search here ..." class="field" />
 				<input type="submit" value="" class="submit">
 				<div class="cl">&nbsp;</div>
-			<form>
+			</form>
 		</div>
 		<!-- /Search -->
 		<ul>

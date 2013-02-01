@@ -5,7 +5,7 @@ $TxtPertanyaan=(!isset($TxtPertanyaan))?'':$TxtPertanyaan;
 $TxtPenanya=(!isset($TxtPenanya))?'':$TxtPenanya;
 ?>
 
-<form action="KonsultasiTanyaSim.php" method="post" name="form1" target="_self">
+<form action="konsultasitanyasim.php" method="post" name="form1" target="_self">
 <table width="400" border="0" cellspacing="1" cellpadding="2">
 <tr bgcolor="#77B6D0"> 
   <td colspan="2"><b>KONSULTASI MATAKULIAH</b></td>
