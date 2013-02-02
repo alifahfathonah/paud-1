@@ -56,6 +56,10 @@ $r=$database->loadquery($sql);
 	
     }
 </script>
+<div id="main">
+	<div class="shell">
+		<!-- Box -->
+		<div class="box">
 <table width="938" cellpadding="0" cellspacing="0">
   <!--DWLayoutTable-->
   <tr >
@@ -74,7 +78,7 @@ foreach($r as $data)
 {
 ?>
   <tr bgcolor="#FFFFFF">
-    <td bgcolor=#00000 width="99" height="20" align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['user_id']; ?></td>
+    <td width="99" height="20" align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['user_id']; ?></td>
     <td height="50" align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['user_name']; ?></td>
     <td align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['user_createddate']; ?></td>
     <td align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><a href='<?php echo ADMIN_ADDR."/editdata_users.php?id=".$data['user_id'] ?>'>Edit</a> <?php if($data['user_id']>1) { ?>| <a href="#" onclick="delaction('<?php echo $data['user_id']?>')">Delete</a><?php } ?></td>    
@@ -94,5 +98,5 @@ foreach($r as $data)
 	  </td>
   </tr>
 </table>
-
+		</div>
 <?php include ADMIN_FOLDER."/includes/footer.php" ?>

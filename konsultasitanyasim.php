@@ -17,7 +17,7 @@ elseif (trim($TxtPenanya)=="") {
 else {
 	$sql = "INSERT INTO konsultasi_tanya(pertanyaan,penanya,tanggal)
 			VALUES ('$TxtPertanyaan','$TxtPenanya',NOW())";
-	//echo debug($sql);
+	
 	$database->execsql($sql);
 	header('Location: index.php?aksi=tanya&menu=2');
 }

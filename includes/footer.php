@@ -31,3 +31,4 @@
 </script>
 </body>
 </html>
+<?php $database->close(); ?>

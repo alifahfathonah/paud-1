@@ -11,6 +11,10 @@ if(!isset($_SESSION['username']))
 include  ADMIN_FOLDER."/includes/header.php";
 
 ?>
+<div id="main">
+	<div class="shell">
+		<!-- Box -->
+		<div class="box">
 <table width="500" border="0" align="center" cellpadding="2" cellspacing="1">
   <tr align="right" bgcolor="#22B5DD"> 
     <td colspan="2">[ <a href="<?php echo ADMIN_ADDR."/jawab_index.php?admin=jawab" ?>" target="_self">Pertanyaan</a> ]</td>
@@ -49,4 +53,5 @@ include  ADMIN_FOLDER."/includes/header.php";
   }
   ?>
 </table>
+		</div>
 <?php include ADMIN_FOLDER."/includes/footer.php" ?>

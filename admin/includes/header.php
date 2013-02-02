@@ -1,86 +1,283 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin Pendidik Paud</title>
-        <link type="text/css" rel="stylesheet" href="<?php echo CSS_ADDR."/admin/admin.css" ?>" />
-        <link type="text/css" rel="stylesheet" href="<?php echo CSS_ADDR."/admin/style.css" ?>" />      
-        <style type="text/css">
-<!--
-.style1 {color: #FFFFFF}
-
-a:link {
-	color: #000000;
-	text-decoration: none;
-}
-a:visited {
-	color: #000000;
-	text-decoration: none;
-}
-a:hover {
-	color: #99CC66;
-	text-decoration: underline;
-}
-a:active {
-	text-decoration: none;
-}
-td {font-family: Verdana, Arial;font-size: 12px;color:#000000;}
--->
-        </style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Website Paud Nur Rahma Tanjung</title>
+	<link rel="stylesheet" href="<?php echo CSS_ADDR."/style.css"; ?>" type="text/css" media="all" />
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo IMG_ADDR."/favicon.ico" ?>" />
+	<!--[if IE 6]>
+		<link rel="stylesheet" href="<?php echo CSS_ADDR."/ie6.css" ?>" type="text/css" media="all" />	
+	<![endif]-->
+	<script type="text/javascript" src="<?php echo JS_ADDR."/jquery-1.4.2.min.js" ?>"></script>
+	<script type="text/javascript" src="<?php echo JS_ADDR."/js/jquery.jcarousel.js" ?>"></script>
+	<!-- Cufon -->
+	<script type="text/javascript" src="<?php echo JS_ADDR."/cufon-yui.js" ?> "></script>
+	<script type="text/javascript" src="<?php echo JS_ADDR."/MyriadPro.font.js" ?>"></script>
+	<script type="text/javascript" src="<?php echo JS_ADDR."/jquery-func.js" ?>"></script>
 </head>
-    <body>
-    <div id="container">
-	
-          <div id="header">
-            <center>
-			<br>
-                    Paud Nur Rahma Tanjung              
-              <p>                      ADMIN PENDIDIK </p>
-   		    </center>
-                
-      </div>
-           <div id="menu">
-                <!-- Menu Bagian Kiri -->
-                 <ul class="dropdown dropdown-horizontal">
-                    <li><a href="home.php#" class="dir" style="cursor: pointer">Dashboard</a>
-                    </li>
-					<li><a  class="dir" style="cursor: pointer">Visi Misi</a>
-					<ul>
-					 <li><a href="<?php echo ADMIN_ADDR."/editdata_visi.php"; ?>">Visi</a></li>
-					 <li><a href="<?php echo ADMIN_ADDR."/editdata_misi.php"; ?>">Misi</a></li>
-					
-					 </ul>
-                    </li>
-					<li><a href='<?php echo ADMIN_ADDR."/editdata_history.php" ?>' class="dir" style="cursor: pointer">Sejarah Singkat</a>
-                        
-                    </li>
-                    </li>
-                   <li><a href='<?php echo ADMIN_ADDR."/tampildata_materi.php" ?>' class="dir" style="cursor: pointer">Materi</a>
-                        <ul>
-                            <li><a href="">Tambah Materi</a></li>
-                        </ul>
-                   </li>
-                    
-                     <li><a href='<?php echo ADMIN_ADDR."/tampil_jawab.php" ?>' class="dir" style="cursor: pointer">Tanya Jawab</a>
-					<ul>
-					
-					</ul>
-                    </li>
-					<li><a class="dir" style="cursor: pointer">Master</a>
-                        <ul>
-                             <li><a class='dir' href="tampildata_users.php">Users</a>
-				<ul>
-					<li><a href="<?php echo ADMIN_ADDR."/tambah_users.php" ?>"> Tambah User</a></li>
-					</ul>
-			     </li>
-                        </ul>
-                    </li>
-                 </ul>
+<body>
+<!-- Header -->
+<div id="header">
+	<div class="shell">
+		<!-- Logo -->
+		<h1 id="logo"><a href="#">Website Elerning Paud Nur Rahma Tanjung<span>Taman Anak-Anak Bermain Dan Belajar</span></a></h1>
+        <!-- /Logo -->
+		
+		<!-- Socials -->
+		<div class="socials">
+			<a href="#" class="link-twitter">Twitter</a>
+			<a href="#" class="link-linkedin">LinkedIn</a>
+			<a href="#" class="link-facebook">Facebook</a>
+			<a href="#" class="link-flickr">flickr</a>
+		</div>
+		<!-- /Socials -->
+	</div>
+</div>
+<!-- /Header -->
 
-                 <!-- Menu Bagian Kanan -->
-                 <ul class="dropdown dropdown-horizontal"  style="float: right;">
-                     <li><a href="home.php" style="cursor: pointer">Home Web</a></li>
-                     <li><a href="logout.php#" class="dir" style="cursor: pointer">Logout</a></li>
-                 </ul>
-            </div>
-			<br><br>
+<!-- Navigation -->
+<div id="navigation">
+	<div class="shell">
+		<!-- Search -->
+		<div id="search">
+			<form action="#">
+				<input type="text" value="Search here ..." title="Search here ..." class="field" />
+				<input type="submit" value="" class="submit">
+				<div class="cl">&nbsp;</div>
+			</form>
+		</div>
+		<!-- /Search -->
+		<ul>
+			<li><a href="<?php echo ADMIN_ADDR."/home.php" ?>">Home</a></li>
+			<li>
+			    <a href="<?php echo ADMIN_ADDR."/editdata_visi.php" ?>">Visi</a>
+			    <ul>
+				<li>
+				    <a href="<?php echo ADMIN_ADDR."/editdata_visi.php" ?>">Visi</a>
+				</li>	
+			    </ul>
+			</li>
+			<li><a href="<?php echo ADMIN_ADDR."/editdata_misi.php" ?>">Misi</a></li>
+			<li><a href="<?php echo ADMIN_ADDR."/editdata_history.php"; ?>">Sejarah singkat</a></li>
+			<li><a href="<?php echo ADMIN_ADDR."/editdata_misi.php" ?>">Soal</a></li>
+			<li><a href="<?php echo ADMIN_ADDR."/editdata_misi.php" ?>">Materi</a></li>
+			<li><a href="<?php echo ADMIN_ADDR."/tampildata_users.php" ?>">User</a></li>
+			<li><a href="<?php echo ADMIN_ADDR."/editdata_help.php" ?>">Bantuan</a></li>
+		</ul>
+		
+		<div class="cl">&nbsp;</div>
+	</div>
+</div>
+<!-- /Navigation -->
+<!-- Intro -->
+<div id="intro">
+	<div class="shell">
+		<!-- Slider Holder -->
+		<div class="slider-holder">
+			<ul>
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/pendidikan-anak-usia-dini-paud.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				
+				
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/333111_311768588846593_101377073_o.jpg" ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/pendidikan-anak-usia-dini-paud.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/images7.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/tampilan utama.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/images6.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/images5.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/images4.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/images3.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/images2.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/images1.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/images.jpg"; ?>" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="<?php echo IMG_ADDR."/slider/paud-2.jpg" ?>" alt="" />
+					</div>				
+					<div class="post-data">
+					  <h2>ploit Your Ideas</h2>
+						
+		  <div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				
+			</ul>
+			
+			<!-- Intro Hole -->
+			<div class="slider-frame">&nbsp;</div>
+			<!-- /Intro Hole -->
+		</div>
+		<!-- /Slider Holder -->
+		
+		<!-- Slider Navigation -->
+		<div class="slider-navigation">
+			<ul>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+			</ul>
+		</div>
+		
+		<!-- /Slider Navigation -->
+	</div>
+</div>
+<!-- /intro -->

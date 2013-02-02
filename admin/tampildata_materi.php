@@ -56,14 +56,19 @@ $r=$database->loadquery($sql);
 	
     }
 </script>
+<div id="main">
+	<div class="shell">
+		<!-- Box -->
+		<div class="box">
 <table width="938" cellpadding="0" cellspacing="0">
   <!--DWLayoutTable-->
   <tr >
-    <td  height="25" colspan="6" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><br><div align="center"><strong>Tabel Users </strong></div><br></td>
+    <td  height="25" colspan="6" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><br><div align="center"><strong>Tabel Materi </strong></div><br></td>
   </tr>
   <tr> 
     <td height="25" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><div align="center"><strong>Kode Materi</strong></div></td>
     <td width="214" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><div align="center"><strong>Nama Materi</strong></div></td>
+    <td width="230" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><div align="center"><strong>Download</strong></div></td>
     <td width="230" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><div align="center"><strong>Tanggal dibuat</strong></div></td>
     <td width="100" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><div align="center"><strong>Aksi</strong></div></td>
   </tr>
@@ -74,8 +79,9 @@ foreach($r as $data)
 {
 ?>
   <tr bgcolor="#FFFFFF">
-    <td bgcolor=#00000 width="99" height="20" align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['id_materi']; ?></td>
+    <td width="99" height="20" align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['id_materi']; ?></td>
     <td height="50" align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['bab_judul']; ?></td>
+    <td align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><a href='<?php echo MATERIAL_FOLDER.'/'.$data['file_data'] ?>'>Klik di sini download materi</a><br></td>
     <td align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['tanggal']; ?></td>
     <td align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><a href='<?php echo ADMIN_ADDR."/editdata_materi.php?id=".$data['id_materi'] ?>'>Edit</a> | <a href="#" onclick="delaction('<?php echo $data['id_materi']?>')">Delete</a></td>    
   </tr>
@@ -94,5 +100,5 @@ foreach($r as $data)
 	  </td>
   </tr>
 </table>
-
+		</div>
 <?php include ADMIN_FOLDER."/includes/footer.php" ?>

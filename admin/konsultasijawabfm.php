@@ -20,7 +20,10 @@ $sql = "SELECT * FROM konsultasi_tanya WHERE id_tanya='$idtanya'";
 $data = $database->query($sql);
 
 ?>
-
+<div id="main">
+	<div class="shell">
+		<!-- Box -->
+		<div class="box">
 <form action="konsultasijawabsim.php" method="post" name="form1" target="_self">
 <table width="450" border="0" cellspacing="1" cellpadding="2">
 <tr bgcolor="#77B6D0"> 
@@ -50,4 +53,5 @@ $data = $database->query($sql);
 </tr>
 </table>
 </form>
+		</div>
 <?php include ADMIN_FOLDER."/includes/footer.php" ?>

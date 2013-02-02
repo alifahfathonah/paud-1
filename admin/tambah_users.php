@@ -19,7 +19,10 @@ $username="";
 <!--To change this template, choose Tools | Templates
 and open the template in the editor.
 -->
-
+<div id="main">
+	<div class="shell">
+		<!-- Box -->
+		<div class="box">
 <table width="100%" height="106" border="0" align="center" cellpadding=3 cellspacing=1>
 <tr >
     <td  height="25" colspan="8" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><br><div align="center"><strong>Tambah Users</strong></div><br></td>
@@ -80,5 +83,5 @@ and open the template in the editor.
     </form></td>
   </tr>
     </table>
-	
+		</div>	
 <?php include ADMIN_FOLDER."/includes/footer.php" ?>
