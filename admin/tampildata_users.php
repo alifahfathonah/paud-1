@@ -89,7 +89,7 @@ foreach($r as $data)
 ?>
   <tr>
     <td height="25" colspan="6" align="center" valign="bottom">
-		<p>&nbsp;	    </p>
+		<p><a href="<?php echo ADMIN_ADDR."/tambah_users.php" ?>">Tambah user</a> </p>
 		<p><b>
 		  <?php 
 			//$query->printNav(); //Cetak paging

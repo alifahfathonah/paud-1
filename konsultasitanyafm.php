@@ -4,7 +4,9 @@ include ROOT."/includes/header.php";
 $TxtPertanyaan=(!isset($TxtPertanyaan))?'':$TxtPertanyaan;
 $TxtPenanya=(!isset($TxtPenanya))?'':$TxtPenanya;
 ?>
-
+<div id="main">
+	<div class="shell">
+	  	<div class="box last-box">
 <form action="konsultasitanyasim.php" method="post" name="form1" target="_self">
 <table width="400" border="0" cellspacing="1" cellpadding="2">
 <tr bgcolor="#77B6D0"> 
@@ -28,4 +30,5 @@ $TxtPenanya=(!isset($TxtPenanya))?'':$TxtPenanya;
 </tr>
 </table>
 </form>
+		</div>
 <?php include ROOT."/includes/footer.php"; ?>

@@ -39,25 +39,237 @@
 <div id="navigation">
 	<div class="shell">
 		<!-- Search -->
-		<div id="search">
+		<!--<div id="search">
 			<form action="#">
 				<input type="text" value="Search here ..." title="Search here ..." class="field" />
 				<input type="submit" value="" class="submit">
 				<div class="cl">&nbsp;</div>
 			</form>
-		</div>
+		</div>-->
 		<!-- /Search -->
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Sejarah Singkat</a></li>
-			<li><a href="#">Visi Misi</a></li>
-			<li><a href="#">Kegiatan Belajar</a></li>
-			<li><a href="#">Tenaga Pendidik</a></li>
-			<li><a href="#">Peserta Didik</a></li>
-			<li><a href="#">Kontak Paud</a></li>
+			<li><a href="<?php echo URL_ADDR ?>">Home</a></li>
+			<li><a href="<?php echo URL_ADDR."/sejarahsingkat.php"; ?>">Sejarah Singkat</a></li>
+			<li><a href="<?php echo URL_ADDR."/visimisi.php"; ?>">Visi Misi</a></li>
+			<li><a href="<?php echo URL_ADDR."/tanya.php"; ?>">Tanya Jawab</a></li>
+			<li><a href="<?php echo URL_ADDR."/tenagadidik.php"; ?>">Tenaga Pendidik</a></li>
+			<li><a href="<?php echo URL_ADDR."/pesertadidik.php"; ?>">Peserta Didik</a></li>
+			<li><a href="<?php echo URL_ADDR."/kontak.php"; ?>">Kontak Paud</a></li>
 		</ul>
 		
 		<div class="cl">&nbsp;</div>
 	</div>
 </div>
 <!-- /Navigation -->
+<!-- Intro -->
+<div id="intro">
+	<div class="shell">
+		<!-- Slider Holder -->
+		<div class="slider-holder">
+			<ul>
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/pendidikan-anak-usia-dini-paud.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				
+				
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/333111_311768588846593_101377073_o.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/pendidikan-anak-usia-dini-paud.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/images7.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/tampilan utama.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/images6.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/images5.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/images4.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/images3.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/images2.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/images1.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/images.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+						<h2>Exploit Your Ideas</h2>
+						
+						<div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				<!-- Intro Post -->
+				<li>
+					<div class="post-image">
+						<img height="250" width="800" src="css/images/paud-2.jpg" alt="" />
+					</div>				
+					<div class="post-data">
+					  <h2>ploit Your Ideas</h2>
+						
+		  <div class="buttons">
+							<a href="#"><span>Read More</span></a>
+						</div>
+					</div>	
+				</li>
+				<!-- /Intro Post -->
+				
+			</ul>
+			
+			<!-- Intro Hole -->
+			<div class="slider-frame">&nbsp;</div>
+			<!-- /Intro Hole -->
+		</div>
+		<!-- /Slider Holder -->
+		
+		<!-- Slider Navigation -->
+		<div class="slider-navigation">
+			<ul>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+			</ul>
+		</div>
+		
+		<!-- /Slider Navigation -->
+	</div>
+</div>
+<!-- /intro -->

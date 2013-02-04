@@ -5,10 +5,12 @@ require_once("../config.php");
 
 if(!isset($_SESSION['username']))
 {
-    header('Location: ../index.php');	
+    header('Location: index.php');	
 }
 include  ADMIN_FOLDER."/includes/header.php"; ?>
-
+<div id="main">
+	<div class="shell">
+	  	<div class="box last-box">
 <table width="500" border="0" align="center" cellpadding="2" cellspacing="1">
   <tr align="right" bgcolor="#22B5DD"> 
     <td colspan="2">[ <a href="<?php echo ADMIN_ADDR."/tampil_jawab.php" ?>" target="_self">Tampil Semua</a>]</td>
@@ -55,4 +57,5 @@ include  ADMIN_FOLDER."/includes/header.php"; ?>
   ?>
   
 </table>
+	</div>
 <?php include ADMIN_FOLDER."/includes/footer.php"; ?>

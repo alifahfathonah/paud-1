@@ -3,7 +3,10 @@ include 'config.php';
 include ROOT."/includes/header.php"; 
 $kdmakul = (!isset($_GET['kdmakul']))?'':$_GET['kdmakul'];
 ?>
-
+<!-- Main -->
+<div id="main">
+	<div class="shell">
+	  	<div class="box last-box">
 <form name="form1" method="GET" action="">
 <table width="500" border="0" align="center" cellpadding="2" cellspacing="1">
 <tr align="right" bgcolor="#22B5DD">
@@ -64,4 +67,5 @@ foreach ($qry as $data) {
 </tr>
 </table>
 </form>
+		</div>
 <?php include ROOT."/includes/footer.php"; ?>

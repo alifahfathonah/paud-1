@@ -19,6 +19,6 @@ else {
 			VALUES ('$TxtPertanyaan','$TxtPenanya',NOW())";
 	
 	$database->execsql($sql);
-	header('Location: index.php?aksi=tanya&menu=2');
+	header('Location: tanya.php');
 }
 ?>

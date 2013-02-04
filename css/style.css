@@ -41,7 +41,7 @@ h3 { font-family:"Trebuchet MS", Arial, Sans-Serif; font-size:25px; color:#57595
 #navigation ul li a:hover,
 #navigation ul li a.active { background-color:#43b543; }
 
-#search { position: absolute; width:  202px; margin:10px 1px 0 0; right: 8px; background:#1a731a; border:1px solid #67b86e; }
+#search { position: absolute; width:  202px; margin:10px 1px 0 0; right: -20px; background:#1a731a; border:1px solid #67b86e; }
 #search form {  }
 #search .field { float:left; color:#c6ddc0; background:#1a731a; border:0; width:140px; padding:10px 17px 5px 16px; }
 #search .submit { border:0; cursor:pointer; background:url(images/search-submit.gif); width:18px; height:28px; float:left; margin-right:9px; }

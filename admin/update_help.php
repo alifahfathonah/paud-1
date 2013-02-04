@@ -15,7 +15,7 @@ $metakey    = $_POST['metakey'];
 $metadesc   = $_POST['metadesc'];
 $url        = $_POST['url'];
 $title      = $_POST['title'];
-$descr       = $_POST['descr'];
+$descr       = strip_tags($_POST['descr']);
 
 $query_r = "UPDATE page_content SET
                 titletags = '$titletags',

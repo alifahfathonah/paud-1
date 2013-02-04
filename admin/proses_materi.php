@@ -11,7 +11,7 @@ if(!isset($_SESSION['username']))
 $kd_matakuliah  =$_POST['kd_matakuliah'];
 $bab_nama	=$_POST['bab_nama'];
 $bab_judul	=$_POST['bab_judul'];
-$definisi	=$_POST['definisi'];
+$definisi	=strip_tags($_POST['definisi']);
 
 $tmp_file   = $_FILES['materi_file']['tmp_name'];
 $t=explode(".",$_FILES['materi_file']['name']);

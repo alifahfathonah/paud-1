@@ -1,4 +1,11 @@
-<?php require_once "../config.php" ?>
+<?php
+session_start();
+require_once "../config.php";
+if(isset($_SESSION['username']))
+{
+    header('Location: home.php');	
+} 
+?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>

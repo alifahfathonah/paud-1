@@ -13,8 +13,8 @@ ini_set('display_errors',true);
 $db= array(
     "hostname"  => 'localhost',
     "database"  => 'pauddb',
-    "user"      => 'paud',
-    "pass"      => '22801979'
+    "user"      => 'root',
+    "pass"      => ''
 );
 
 //Path Configuration
@@ -30,7 +30,7 @@ define('ADMIN_FOLDER',ROOT."/admin");
 
 
 //URL Configuration
-define('URL_ADDR','http://'.$_SERVER['HTTP_HOST']);
+define('URL_ADDR','http://'.$_SERVER['HTTP_HOST']."/paud");
 define('IMG_ADDR',URL_ADDR."/images");
 define('MATERIAL_ADDR',URL_ADDR."/materi");
 define('JS_ADDR',URL_ADDR."/js");

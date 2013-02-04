@@ -6,7 +6,9 @@
     //echo debug($r[0]['user_name']);
     //exit();
     if (isset($r[0]['user_name'])){
-         $_SESSION['username']=$_POST["user_name"];
+        $_SESSION['username']=$_POST["user_name"];
+        $q2="update users set status='on' where user_name='$_POST[user_name]'";
+	$h2=$database->execsql($q2);
         header('Location: home.php');
 
     }else{

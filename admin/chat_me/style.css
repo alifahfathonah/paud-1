@@ -1,0 +1,85 @@
+/* css-nya */
+
+body{
+	font : 12px arial;
+	color : black;
+	text-align : center;
+	margin : 0px auto;
+	padding : 0px;
+	background-color : #09f76e;
+}
+form, p, span{
+	margin : 0px;
+	padding : 0px;
+}
+input{
+	font : 12px arial;
+}
+a{
+	color : black;
+	text-decoration : none;
+}
+a:hover{
+	text-decoration : underline;
+}
+#wrapper{
+	
+	padding-bottom :25px;
+	background : #09f76e;
+}
+#content{
+	padding : 12px 27px 12px 27px;
+}
+#chatbox{
+	text-align : left;
+	margin : 0 auto;
+	margin-bottom : 25px;
+	padding : 10px;
+	background : white;
+	height : 300px;
+	width : 387px;
+	border : 1px solid black;
+	margin-left :20px;
+	overflow : auto;
+}
+#menu{
+	padding :12px 27px 12px 27px;
+}
+#message-input{
+	width : 58%;
+	height : 40px;
+	border : 1px solid black;
+	float : left;
+	margin-left : 20px;
+}
+#message-submit{
+	width : 60px;
+	height : 40px;
+	border : 1px solid black;
+	margin-right : 130px;	
+}
+#footer{
+	float : left;
+	margin-left : 160px;
+	padding : 20px;
+}
+.welcome{
+	float : left;
+}
+.logout{
+	float : left;
+	margin-left : 260px;
+}
+#online{
+	text-align : left;
+	float:right;
+	margin-right : 30px;
+	background : white;
+	width : 100px;
+	height : 320 px;
+	border : 1px solid black;
+}
+.message-line{
+	margin : 0 0 2px 0;
+	color : black;
+}

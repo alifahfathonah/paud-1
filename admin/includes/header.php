@@ -9,11 +9,20 @@
 		<link rel="stylesheet" href="<?php echo CSS_ADDR."/ie6.css" ?>" type="text/css" media="all" />	
 	<![endif]-->
 	<script type="text/javascript" src="<?php echo JS_ADDR."/jquery-1.4.2.min.js" ?>"></script>
-	<script type="text/javascript" src="<?php echo JS_ADDR."/js/jquery.jcarousel.js" ?>"></script>
+	<script type="text/javascript" src="<?php echo JS_ADDR."/jquery.jcarousel.js" ?>"></script>
 	<!-- Cufon -->
 	<script type="text/javascript" src="<?php echo JS_ADDR."/cufon-yui.js" ?> "></script>
 	<script type="text/javascript" src="<?php echo JS_ADDR."/MyriadPro.font.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo JS_ADDR."/jquery-func.js" ?>"></script>
+	<script type="text/javascript">
+	    $(document).ready(function() {
+		$("#chat").click(function() {
+		    window.open("<?php echo ADMIN_ADDR.'/chat_me/chat.php' ?>",'Chat','width=570,height=500,resizable=no,menubar=no,toolbars=no,directories=no,location=no,scrollbars=no,status=no')
+		    return false;
+		})
+		
+	    })
+	</script>
 </head>
 <body>
 <!-- Header -->
@@ -39,30 +48,26 @@
 <div id="navigation">
 	<div class="shell">
 		<!-- Search -->
-		<div id="search">
+		<!--<div id="search">
 			<form action="#">
 				<input type="text" value="Search here ..." title="Search here ..." class="field" />
 				<input type="submit" value="" class="submit">
 				<div class="cl">&nbsp;</div>
 			</form>
-		</div>
+		</div>-->
 		<!-- /Search -->
 		<ul>
 			<li><a href="<?php echo ADMIN_ADDR."/home.php" ?>">Home</a></li>
 			<li>
-			    <a href="<?php echo ADMIN_ADDR."/editdata_visi.php" ?>">Visi</a>
-			    <ul>
-				<li>
-				    <a href="<?php echo ADMIN_ADDR."/editdata_visi.php" ?>">Visi</a>
-				</li>	
-			    </ul>
+			    <a href="<?php echo ADMIN_ADDR."/content.php" ?>">Content</a>
 			</li>
-			<li><a href="<?php echo ADMIN_ADDR."/editdata_misi.php" ?>">Misi</a></li>
-			<li><a href="<?php echo ADMIN_ADDR."/editdata_history.php"; ?>">Sejarah singkat</a></li>
-			<li><a href="<?php echo ADMIN_ADDR."/editdata_misi.php" ?>">Soal</a></li>
-			<li><a href="<?php echo ADMIN_ADDR."/editdata_misi.php" ?>">Materi</a></li>
+			<li><a href="<?php echo ADMIN_ADDR."/jawab_index.php" ?>">Tanya Jawab </a></li>
+			<li><a href="<?php echo ADMIN_ADDR."/tampildata_materi.php" ?>">Materi</a></li>
+			<li><a href="<?php echo ADMIN_ADDR."/tampildata_peserta.php" ?>">Peserta</a></li>
 			<li><a href="<?php echo ADMIN_ADDR."/tampildata_users.php" ?>">User</a></li>
-			<li><a href="<?php echo ADMIN_ADDR."/editdata_help.php" ?>">Bantuan</a></li>
+			<li><a href="<?php echo ADMIN_ADDR."/editdata_paul.php" ?>">Edit Kontak</a></li>
+			<li><a href="#" id="chat">Chat</a></li>
+			<li><a href="<?php echo ADMIN_ADDR."/logout.php" ?>">logout</a></li>
 		</ul>
 		
 		<div class="cl">&nbsp;</div>

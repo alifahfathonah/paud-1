@@ -29,7 +29,7 @@ else {
 	//echo debug($sql);
 	$database->execsql($sql);
 	//exit();
-		  
-	header('Location: jawab_index.php?admin=jawab');
+	echo "<script>location.href='".ADMIN_ADDR."/jawab_index.php?admin=jawab';</script>";	  
+	//header('Location: jawab_index.php?admin=jawab');
 }
 ?>

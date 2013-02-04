@@ -27,7 +27,7 @@ and open the template in the editor.
 		<div class="box">
 <table width="100%" height="106" border="0" align="center" cellpadding=3 cellspacing=1>
 <tr >
-    <td  height="25" colspan="8" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><br><div align="center"><strong>Edit Bantuan</strong></div><br></td>
+    <td  height="25" colspan="8" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><br><div align="center"><strong>Edit User</strong></div><br></td>
   </tr>
 <tr>
     <td class="style3">
@@ -47,7 +47,7 @@ and open the template in the editor.
         </tr>
 	<tr>
           <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">Nama Depan</td>
-          <td><input name="first_name" type="text" size="70" id="last_name" value="<?php echo $row['first_name'];?>"></td>
+          <td><input name="first_name" type="text" size="70" id="first_name" value="<?php echo $row['first_name'];?>"></td>
         </tr>
 	<tr>
           <td height="32"><font size="3" face="Times New Roman, Times, serif" color="#000000">Nama Belakang</td>

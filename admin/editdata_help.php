@@ -51,11 +51,11 @@ and open the template in the editor.
           <td><input name="url" type="text" size="70" id="url" value="<?php echo $row[5];?>"></td>
         </tr>
 	<tr>
-		 <td height="34"><font size="3" face="Times New Roman, Times, serif" color="#000000">Title </td>
+		 <td height="34"><font size="3" face="Times New Roman, Times, serif" color="#000000">Judul</td>
           <td> <input name="title" type="text" size="70" id="title" value="<?php echo $row[6];?>"></td>
         </tr>
 	<tr>
-		 <td height="34"><font size="3" face="Times New Roman, Times, serif" color="#000000">Description</td>
+		 <td height="34"><font size="3" face="Times New Roman, Times, serif" color="#000000">Deskripsi</td>
           <td> <textarea name="descr" rows=10 cols=35 id="descr"><?php echo $row[8];?></textarea></td>
         </tr>
 		 <tr>

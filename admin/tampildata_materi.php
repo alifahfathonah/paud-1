@@ -81,7 +81,7 @@ foreach($r as $data)
   <tr bgcolor="#FFFFFF">
     <td width="99" height="20" align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['id_materi']; ?></td>
     <td height="50" align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['bab_judul']; ?></td>
-    <td align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><a href='<?php echo MATERIAL_FOLDER.'/'.$data['file_data'] ?>'>Klik di sini download materi</a><br></td>
+    <td align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><a href='<?php echo MATERIAL_ADDR.'/'.$data['file_data'] ?>'>Klik di sini download materi</a><br></td>
     <td align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><?php echo $data['tanggal']; ?></td>
     <td align="center" valign="middle"><font size="3" face="Times New Roman, Times, serif" color="#000000"><a href='<?php echo ADMIN_ADDR."/editdata_materi.php?id=".$data['id_materi'] ?>'>Edit</a> | <a href="#" onclick="delaction('<?php echo $data['id_materi']?>')">Delete</a></td>    
   </tr>
@@ -91,7 +91,8 @@ foreach($r as $data)
 ?>
   <tr>
     <td height="25" colspan="6" align="center" valign="bottom">
-		<p>&nbsp;	    </p>
+		
+		<p><a href="<?php echo ADMIN_ADDR."/tambah_materi.php"; ?>">Tambah Materi</a>	    </p>
 		<p><b>
 		  <?php 
 			//$query->printNav(); //Cetak paging
